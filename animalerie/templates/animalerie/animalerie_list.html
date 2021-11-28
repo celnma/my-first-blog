@@ -1,0 +1,64 @@
+{% extends 'animalerie/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-lg-7 d-flex align-items-center align-content-start flex-wrap">
+        <div class="row">
+            <h3>Les animaux</h3>
+        </div>
+        <div class="row">
+            {% for animal in animals %}
+            <div class="card" style="width: 16rem;">
+                <img src="{{animal.photo}}" class="card-img-top" alt="image en construction">
+                <div class="card-body">
+                    <h5 class="card-title">{{ animal.id_animal }}</h5>
+                    <p class="card-text">
+                        <label> État : </label>
+                        <span class="badge"> {{ animal.etat }}</span>
+                        <br>
+                        <label> Lieu : </label>
+                        <span class="badge"> {{ animal.lieu }}</span>
+                    </p>
+                    <a href="{% url 'animal_detail' id_animal=animal.id_animal %}" class="btn btn-outline-primary">Plus de
+                        détails</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="col-lg-5 d-flex align-content-start flex-wrap">
+        <div class="row">
+            <h3> Les équipements </h3>
+        </div>
+
+        <div class="row">
+            {% for equipement in equipements %}
+            <div class="card" style="width: 15rem; ">
+                <img src="{{ equipement.photo }}" class="card-img-top" alt="image en construction">
+                <div class="card-body">
+                    <h5 class="card-title">{{ equipement.id_equip}}</h5>
+                    <p class="card-text">
+                        {% if equipement.verifie_disponibilite == True %}
+                        <label class="badge badge-success"> {{ equipement.disponibilite}}</label>
+                        {% endif%} 
+                        {% if equipement.verifie_disponibilite == False %}
+                        <label class="badge badge-danger"> {{ equipement.disponibilite}}</label>
+                        {% endif%} 
+
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+</div>
+
+
+
+{% endblock %}

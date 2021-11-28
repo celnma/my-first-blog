@@ -1,0 +1,105 @@
+body{
+    font-family:'Courier New', Courier, monospace;
+    background-color: floralwhite;
+    align-items: center;
+}
+
+#home{
+    margin-top: 5%;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+a{
+    color: rgb(55, 71, 212);
+}
+
+span{
+    font-weight: 600;
+}
+
+.button{
+    text-align: center;
+}
+
+.navbar{
+    background-color:rgb(55, 71, 212);
+    color: white;
+}
+
+.navbar-brand{
+    color: white;
+}
+
+.navbar-brand:hover{
+    color: white;
+}
+
+
+.btn-outline-primary {
+    border-radius: 0%;
+    color: rgb(55, 71, 212);
+    border-color: rgb(55, 71, 212);
+}
+
+.btn-outline-primary:hover {
+    background-color: rgb(55, 71, 212);
+    border-color: rgb(55, 71, 212);
+}
+
+.btn.btn-outline-dark{
+    border-radius: 0%;
+}
+
+.row{
+    margin: 1%;
+    margin-top: 1%;
+}
+
+#detailAnimal{
+    margin: 2%;
+}
+
+.card{
+    border-radius: 0%;
+    margin:10px;
+}
+
+.card-text{
+    font-size: 15px;
+    margin-bottom: 2%;
+}
+
+.card-img-top {
+    border-radius: 0%;
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.card-img{
+    border-radius: 0%;
+}
+
+.card-title {
+    color: rgb(55, 71, 212);
+    margin: 1%;
+}
+
+.badge{
+    border-radius: 0%;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.badge-success{
+    font-weight: 200;
+}
+
+.badge-danger{
+    font-weight: 200;
+}
+

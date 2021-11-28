@@ -1,0 +1,36 @@
+{% extends 'animalerie/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="card" id="detailAnimal">
+        <div class="row">
+            <div class="card-body col-lg-7 text-center">
+                <div class=card-title>
+                    <h1>{{ animal.id_animal}}</h1>
+                </div>
+                <br>
+                <div class="card-text">
+                    <p>Voici <span>{{animal.id_animal}}</span>, notre adorable {{animal.race}} !</p>
+                    <p>En ce moment, il est <span>{{animal.etat}}</span>...</p>
+                    <p>Où voulez-vous déplacer {{animal.id_animal}} ? </p>
+                    <form method="POST" class="post-form">{% csrf_token %}
+                            {{form.lieu}}
+                            <button type="submit" class="btn btn-outline-primary">OK</button>
+                            <a href="{% url 'animalerie_list' %}" class="btn btn-outline-dark">Back</a>
+                    </form>
+                </div>
+            </div>
+            <div class="card-body col-lg-5">
+                <img src="{{ animal.photo}}" class="card-img">
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+{% endblock %}

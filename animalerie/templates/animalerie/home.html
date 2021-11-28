@@ -1,0 +1,35 @@
+{% extends 'animalerie/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container" id="home">
+    <div class="title">
+        <h1> Bienvenue à l'animalerie Machimachi ! </h1>
+        <p>
+            Venez prendre soin de nos animaux : Tic, Tac, Totoro, Pocahontas et Patrick !
+        </p>
+        <br>
+        <a href="{% url 'animalerie_list' %}" class="btn btn-outline-primary">Click here!</a>
+    </div>
+    <br>
+    <div class="title">
+        <h2> Les règles de l'animalerie </h2>
+    </div>
+    <p>
+        L'animalerie dispose de 4 lieux pour s'occuper des animaux suivant leurs besoins : la mangeoire, le nid, la roue
+        et la litière.
+    <ul>
+        <li> Quand un animal est <span>affamé</span>, il faut le nourrir à la <span>mangeoire</span>.</li>
+        <li> Quand un animal est <span>repus</span>, il faut qu'il se divertisse à la <span>roue</span>.</li>
+        <li> Quand un animal est <span>fatigué</span>, il faut l'endormir au <span>nid</span>.</li>
+        <li> Quand un animal est <span>endormi</span>, il faut le réveiller dans sa <span>litière</span>.</li>
+    </ul>
+    Attention, chaque équipement, sauf la litière, ne peut être occupé par un seul animal à la fois !
+    <br>
+    Tous les animaux disposent de leur propre litière, l'équipement Litière est donc toujurs libre par défaut.
+    </p>
+</div>
+
+{% endblock %}

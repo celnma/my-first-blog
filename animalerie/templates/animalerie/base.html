@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Animalerie</title>
+
+    <script src="https://kit.fontawesome.com/9dde53b815.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="{% static 'css/animalerie.css' %}">
+
+</head>
+
+<body>
+    <header class="page-header">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href='/'>
+                    <i class="fas fa-paw"></i>
+                    Machimachi
+                </a>
+                <a class="navbar-brand" href="{% url 'admin:index' %}">
+                    <i class="fas fa-lock"></i>
+                    Admin
+                </a>
+            </div>
+        </nav>
+
+    </header>
+    <main class="container-fluid">
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+
+</html>
