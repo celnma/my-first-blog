@@ -26,7 +26,7 @@ def Divertir (animal, roue, ancien_equip):
     else :
         animal.etat = 'fatigué'
         animal.lieu = roue
-        roue.disponibilitée = 'occupé'
+        roue.disponibilite = 'occupé'
         ancien_equip.disponibilite = "libre"
         message = str("Maintenant, " + animal.id_animal + " est fatigué !")
         result = True

@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .forms import MoveForm
 from .models import Animal, Equipement
-from .controller import Nourrir, Divertir, Dormir, Réveiller  
+from .controler import Nourrir, Divertir, Dormir, Réveiller  
  
 # Create your views here.
 def homePage(request):
